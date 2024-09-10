@@ -27,7 +27,7 @@ const VPNs = [
 
 const cryptoCurrenciesLogos = [
   '/changelly.png',
-  '/coin.png',
+  'https://i.ibb.co/vvp6Vs4/Coin.png',
   '/bitcoin.png',
   '/polygon.png',
   '/eth.png',
@@ -45,7 +45,7 @@ const features = [
     title: 'Not Crypto Savvy?\nNo Problem!',
     description:
       'Sign up with your email and play just like a regular crypto casino. Instant withdrawals, lightning-fast support—your crypto, your way, with the speed and ease you deserve.',
-    icon: '/coin.png',
+    icon: 'https://i.ibb.co/vvp6Vs4/Coin.png',
   },
   {
     title: 'USA Players\nWelcome',
@@ -185,7 +185,7 @@ export default function LandingPage() {
                   {feature.description}
                 </p>
               </div>
-              <Image
+              <img
                 draggable={false}
                 src={feature.icon}
                 alt="Icon"
