@@ -60,7 +60,6 @@ export default function LandingPage() {
     <>
       <section className="relative max-w-[1920px] mx-auto">
         <img
-          draggable={false}
           src="/hero.png"
           draggable={false}
           className="select-none size-full md:min-h-fit min-h-[500px] object-cover object-right"
@@ -158,7 +157,6 @@ export default function LandingPage() {
         <img
           draggable={false}
           src="/section.png"
-          draggable={false}
           className="select-none size-full object-cover object-center"
           alt="BS.GG Hero"
           width={1280}
