@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   color: var(--foreground);
@@ -60,7 +49,7 @@ body {
   }
   
   .dark {
-    --background: 60 3% 6%;
+    --background: 223 10% 14%;
     --foreground: 0 0% 98%;
 
     --card: 60 6% 7%;
