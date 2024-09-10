@@ -6,6 +6,8 @@ import { Antonio, Outfit } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
 import Footer from '@/components/footer';
 import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
+import TawkTo from 'next-tawkto';
+import { useEffect } from 'react';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -39,6 +41,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  useEffect(() => {
+    const tawk = new TawkTo('66dfe792ea492f34bc104f9f', '1i7da15o2');
+    tawk.onStatusChange((status: string) => {
+      console.log(status);
+    });
+  }, []);
+
   return (
     <html lang="en">
       <body
