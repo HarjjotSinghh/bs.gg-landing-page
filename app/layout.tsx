@@ -1,9 +1,11 @@
-import type { Metadata } from 'next';
+'use client';
+
 import localFont from 'next/font/local';
 import './globals.css';
 import { Antonio, Outfit } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
 import Footer from '@/components/footer';
+import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -32,11 +34,6 @@ const outfit = Outfit({
   display: 'swap',
 });
 
-export const metadata: Metadata = {
-  title: 'BS.GG',
-  description: 'BS.GG Landing Page',
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -47,6 +44,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${antonio.variable} ${outfit.variable} antialiased font-outfit`}
       >
+        <TawkMessengerReact propertyId="9898745c4c2206183ea150271938f7a5d6381cf9" widgetId="1i7da15o2" />
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} forcedTheme="dark" themes={['dark']}>
           <main className="bg-background text-foreground">
             {children}
