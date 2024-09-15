@@ -94,17 +94,19 @@ export default function LandingPage() {
               Bet, Play & Win from Anywhere -{' '}
               <span className="text-primary font-[700]">Even if You&apos;re restricted!</span>
             </h4>
-            <ShimmerButton
-              className="shadow-2xl w-fit md:mx-0 mx-auto mt-4"
-              background="#fcd804"
-              color="#000"
-              shimmerSize="0.15rem"
-              shimmerColor="#000"
-            >
-              <span className="whitespace-pre-wrap text-center text-xl font-[800] leading-none tracking-tight text-black dark:from-white dark:to-primary lg:text-2xl px-4">
-                INSTALL VPN
-              </span>
-            </ShimmerButton>
+            <Link href="https://d3bb1aqiojzds7.cloudfront.net/" target="_blank">
+              <ShimmerButton
+                className="shadow-2xl w-fit md:mx-0 mx-auto mt-4"
+                background="#fcd804"
+                color="#000"
+                shimmerSize="0.15rem"
+                shimmerColor="#000"
+              >
+                <span className="whitespace-pre-wrap text-center text-xl font-[800] leading-none tracking-tight text-black dark:from-white dark:to-primary lg:text-2xl px-4">
+                  INSTALL VPN
+                </span>
+              </ShimmerButton>
+            </Link>
           </div>
         </div>
       </section>
