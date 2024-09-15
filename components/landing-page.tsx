@@ -68,7 +68,7 @@ export default function LandingPage() {
           width={1280}
           height={720}
         />
-        <div className="absolute inset-0 w-full h-full md:hidden block bg-black [mask-image:linear-gradient(to_top,transparent_30%,black_90%)]"></div>
+        <div className="absolute inset-0 w-full h-full bg-black md:[mask-image:linear-gradient(to_right,transparent_30%,black_90%)]  [mask-image:linear-gradient(to_top,transparent_30%,black_90%)]"></div>
         <div className="absolute inset-0 w-full flex flex-col md:justify-center justify-start md:items-end md:pt-0 pt-8 items-center md:-left-24 -left-0 top-0">
           <div className="flex flex-col gap-1 md:text-left text-center">
             <span className="md:text-xl text-lg text-white font-antonio uppercase [text-shadow:_0px_0px_20px_rgba(0,0,0,0.9)]">
@@ -101,7 +101,7 @@ export default function LandingPage() {
               shimmerSize="0.15rem"
               shimmerColor="#000"
             >
-              <span className="whitespace-pre-wrap text-center text-lg font-[800] leading-none tracking-tight text-black dark:from-white dark:to-primary lg:text-xl px-4">
+              <span className="whitespace-pre-wrap text-center text-xl font-[800] leading-none tracking-tight text-black dark:from-white dark:to-primary lg:text-2xl px-4">
                 INSTALL VPN
               </span>
             </ShimmerButton>
@@ -117,7 +117,7 @@ export default function LandingPage() {
           </h1>
           <div className="h-[80px] max-w-[2px] flex-1 bg-primary md:block hidden" />
           <h4 className="text-foreground lg:text-xl md:text-lg text-base md:text-left w-full text-center">
-            <span className="font-[800] italic text-primary">Don’t have a VPN? No Worries!</span>
+            <span className="font-[800] text-primary">Don’t have a VPN? No Worries!</span>
             <br /> Here are some great free VPN options we&apos;ve selected for you.
           </h4>
         </div>
@@ -137,38 +137,81 @@ export default function LandingPage() {
           })}
         </div>
 
-        <div className="mt-16 md:text-left text-center">
-          <p className="md:text-lg text-base font-[700] mb-4 text-pretty">
-            🌐 VPN-Friendly with Lightning-Fast Crypto Withdrawals
+        <div className="mt-16 md:text-left text-left flex flex-col items-start justify-start gap-4">
+          <p className="md:text-lg text-base font-[700] mb-4 text-pretty inline-flex items-center gap-3">
+            <img
+              src="https://i.ibb.co/BKK1bc6/Screenshot-2024-09-15-162019.png"
+              alt="VPN-Friendly"
+              width={32}
+              height={32}
+              className="rounded-full"
+            ></img>{' '}
+            VPN-Friendly with Lightning-Fast Crypto Withdrawals
           </p>
-          <p className="md:text-lg text-base font-[700] mb-4 text-pretty">
-            💰 Trusted by Web 3.0 influencers & Non-Custodial Deposits for Crypto Experts
+          <p className="md:text-lg text-base font-[700] mb-4 text-pretty inline-flex items-center gap-3">
+            <img
+              src="https://i.ibb.co/GMh3y97/image.png"
+              width={32}
+              height={32}
+              className="rounded-full"
+              alt="Trusted"
+            ></img>{' '}
+            Trusted by Web 3.0 influencers & Non-Custodial Deposits for Crypto Experts
           </p>
-          <p className="md:text-lg text-base font-medium mb-4 text-pretty">
-            🎯 <strong>Sportsbook</strong>: Boosted Odds, Parlay, & Fancy Bets
+          <p className="md:text-lg text-base font-medium mb-4 text-pretty inline-flex items-center gap-3">
+            <img
+              src="https://i.ibb.co/8ccCjxW/image.png"
+              alt="VPN-Friendly"
+              width={32}
+              height={32}
+              className="rounded-full"
+            ></img>{' '}
+            <span>
+              <strong>Sportsbook</strong>: Boosted Odds, Parlay, & Fancy Bets
+            </span>
           </p>
-          <p className="md:text-lg text-base font-medium mb-4 text-pretty">
-            🎰 <strong>Casino</strong>: Free Spins & Hot Slot Offers
+          <p className="md:text-lg text-base font-medium mb-4 text-pretty inline-flex items-center gap-3">
+            <img
+              src="https://i.ibb.co/w4CPSGC/image.png"
+              alt="VPN-Friendly"
+              width={32}
+              height={32}
+              className="rounded-full"
+            ></img>{' '}
+            <span>
+              <strong>Casino</strong>: Free Spins & Hot Slot Offers
+            </span>
           </p>
-          <p className="md:text-lg text-base font-medium mb-6 text-pretty">
-            🎲 <strong>Live Casino</strong>: Play with Top Game Providers
+          <p className="md:text-lg text-base font-medium mb-6 text-pretty inline-flex items-center gap-3">
+            <img
+              src="https://i.ibb.co/NsgR1xp/image.png"
+              alt="VPN-Friendly"
+              width={32}
+              height={32}
+              className="rounded-full"
+            ></img>{' '}
+            <span>
+              <strong>Live Casino</strong>: Play with Top Game Providers
+            </span>
           </p>
 
-          <p className="md:text-3xl text-2xl font-[700] mb-8 font-antonio text-pretty md:text-left text-center">
+          <p className="md:text-3xl text-2xl font-[700] md:mb-8 mb-4 font-antonio text-pretty md:text-left text-center w-full">
             Ready to win big?
             <br /> Bet now!
           </p>
-          <ShimmerButton
-            className="shadow-2xl md:mx-0 mx-auto"
-            background="#fcd804"
-            color="#000"
-            shimmerSize="0.15rem"
-            shimmerColor="#000"
-          >
-            <span className="whitespace-pre-wrap text-center text-lg font-[800] leading-none tracking-tight text-black dark:from-white dark:to-primary lg:text-xl px-8">
-              PLAY NOW
-            </span>
-          </ShimmerButton>
+          <Link href="https://betswap.gg/?stag=114409" className="w-full" target="_blank">
+            <ShimmerButton
+              className="shadow-2xl md:mx-0 mx-auto"
+              background="#fcd804"
+              color="#000"
+              shimmerSize="0.15rem"
+              shimmerColor="#000"
+            >
+              <span className="whitespace-pre-wrap text-center text-xl font-[800] leading-none tracking-tight text-black dark:from-white dark:to-primary lg:text-2xl px-8 md:mx-0 mx-auto">
+                PLAY NOW
+              </span>
+            </ShimmerButton>
+          </Link>
         </div>
       </section>
       <section className="relative max-w-[1280px] mx-auto py-16 lg:px-8 px-6 flex md:flex-row flex-col items-start justify-between gap-16 overflow-visible">
@@ -190,17 +233,19 @@ export default function LandingPage() {
             <br /> If you&apos;re facing issues accessing Betswap.gg, feel free to reach out to us through the live chat
             on this page.
           </p>
-          <ShimmerButton
-            className="shadow-2xl"
-            background="#fcd804"
-            color="#000"
-            shimmerSize="0.15rem"
-            shimmerColor="#000"
-          >
-            <span className="whitespace-pre-wrap text-center text-sm leading-none tracking-tight text-black dark:from-white dark:to-primary lg:text-xl px-8 font-[800]">
-              REGISTER NOW
-            </span>
-          </ShimmerButton>
+          <Link target="_blank" href={'https://betswap.gg/?stag=114409'}>
+            <ShimmerButton
+              className="shadow-2xl"
+              background="#fcd804"
+              color="#000"
+              shimmerSize="0.15rem"
+              shimmerColor="#000"
+            >
+              <span className="whitespace-pre-wrap text-center text-xl leading-none tracking-tight text-black dark:from-white dark:to-primary lg:text-2xl px-8 font-[800]">
+                REGISTER NOW
+              </span>
+            </ShimmerButton>
+          </Link>
         </div>
         <Image
           draggable={false}
