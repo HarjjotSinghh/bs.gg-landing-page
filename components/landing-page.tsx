@@ -1,27 +1,20 @@
 import Link from 'next/link';
 import { SpotBlur } from './ui/spot-blur';
 import Image from 'next/image';
+import ShimmerButton from './magicui/shimmer-button';
 
 const VPNs = [
+  {
+    link: 'https://d3bb1aqiojzds7.cloudfront.net/',
+    logo: 'https://www.rynvpn.com/assets/images/ryn-vpn-logo.png',
+  },
   {
     link: 'https://protonvpn.com/download-windows',
     logo: '/vpns/proton.svg',
   },
   {
-    link: 'https://www.rynvpn.com',
-    logo: 'https://www.rynvpn.com/assets/images/ryn-vpn-logo.png',
-  },
-  {
     link: 'https://windscribe.com/download',
     logo: '/vpns/windscribe.png',
-  },
-  {
-    link: 'https://tunnelbear.com/download',
-    logo: '/vpns/tunnelbear.png',
-  },
-  {
-    link: 'https://zoogvpn.com/download',
-    logo: '/vpns/zoogvpn.png',
   },
 ];
 
@@ -59,84 +52,170 @@ export default function LandingPage() {
   return (
     <>
       <section className="relative max-w-[1920px] mx-auto">
-        <img
+        <Image
           src="/hero.png"
           draggable={false}
-          className="select-none size-full md:min-h-fit min-h-[500px] object-cover object-right"
+          className="select-none size-full md:min-h-fit min-h-[500px] object-cover object-right md:block hidden"
           alt="BS.GG Hero"
           width={1280}
           height={720}
         />
-        <div className="absolute inset-0 size-full flex flex-col justify-center md:items-end items-center md:-left-24 -left-0 top-0">
-          <div className="flex flex-col gap-0">
-            <h3 className="text-white lg:text-2xl md:text-xl text-lg font-antonio font-bold italic uppercase">
-              180% Welcome Bonus
+        <Image
+          src="/hero-mobile.jpeg"
+          draggable={false}
+          className="select-none size-full object-cover object-center md:hidden block"
+          alt="BS.GG Hero"
+          width={1280}
+          height={720}
+        />
+        <div className="absolute inset-0 w-full h-full md:hidden block bg-black [mask-image:linear-gradient(to_top,transparent_30%,black_90%)]"></div>
+        <div className="absolute inset-0 w-full flex flex-col md:justify-center justify-start md:items-end md:pt-0 pt-8 items-center md:-left-24 -left-0 top-0">
+          <div className="flex flex-col gap-1 md:text-left text-center">
+            <span className="md:text-xl text-lg text-white font-antonio uppercase [text-shadow:_0px_0px_20px_rgba(0,0,0,0.9)]">
+              Bet Big With
+            </span>
+            <div className="relative">
+              <Image
+                src="/betswap-logo.png"
+                className="md:mx-0 mx-auto pt-2 pb-4 !z-10 brightness-[2000] contrast-[2000] grayscale"
+                width={200}
+                height={200}
+                alt="BetSwap"
+              />
+              <div className="absolute inset-0 size-20 md:mx-0 mx-auto -top-0 bg-black/20 blur-2xl rounded-full"></div>
+            </div>
+            <h3 className="text-white lg:text-xl md:text-lg text-base font-antonio font-[700] uppercase [text-shadow:_0px_0px_20px_rgba(0,0,0,0.9)]">
+              Claim your 180% Welcome Bonus
             </h3>
-            <h1 className="text-white lg:text-7xl md:text-6xl text-4xl font-antonio font-extrabold">20000 USDT</h1>
-            <h4 className="text-white lg:text-lg md:text-base text-sm font-antonio font-thin mt-2">
+            <h1 className="text-white lg:text-7xl md:text-6xl text-4xl font-antonio font-[800] [text-shadow:_0_0px_20px_rgba(0,0,0,0.9)]">
+              UPTO 20,000 USDT
+            </h1>
+            <h4 className="text-white lg:text-lg md:text-base text-sm font-antonio font-thin mt-2 [text-shadow:_0px_0px_20px_rgba(0,0,0,0.9)]">
               Bet, Play & Win from Anywhere -{' '}
-              <span className="text-primary font-bold">Even if You&apos;re restricted!</span>
+              <span className="text-primary font-[700]">Even if You&apos;re restricted!</span>
             </h4>
-            <button className="bg-[linear-gradient(-140deg,_rgba(252,216,4,1)_0%,_rgba(9,9,121,0)_30%,_rgba(137,118,59,0)_70%,_rgba(252,216,4,1)_100%)] bg-[size:110%_110%] bg-center text-primary rounded-lg w-fit  uppercase font-extrabold p-0.5 flex items-center justify-center mt-4 lg:text-sm text-xs">
-              <span className="bg-background/90 rounded-lg size-full px-16 py-2">PLAY NOW</span>
-            </button>
+            <ShimmerButton
+              className="shadow-2xl w-fit md:mx-0 mx-auto mt-4"
+              background="#fcd804"
+              color="#000"
+              shimmerSize="0.15rem"
+              shimmerColor="#000"
+            >
+              <span className="whitespace-pre-wrap text-center text-lg font-[800] leading-none tracking-tight text-black dark:from-white dark:to-primary lg:text-xl px-4">
+                INSTALL VPN
+              </span>
+            </ShimmerButton>
           </div>
         </div>
       </section>
-      <section className="relative max-w-[1280px] mx-auto py-24 lg:px-8 px-6">
-        <div className="flex md:flex-row flex-col items-start gap-8 justify-between mb-16">
-          <h1 className="text-foreground lg:text-5xl md:text-4xl text-3xl font-extrabold">
-            Can&apos;t Register?
+      <section className="relative max-w-[1280px] mx-auto py-16 lg:px-8 px-4">
+        <div className="flex md:flex-row flex-col items-center gap-8 justify-center mb-16">
+          <h1 className="text-foreground md:text-left text-center w-full lg:text-3xl md:text-2xl text-xl text-pretty font-[800]">
+            Having trouble registering?
             <br />
-            Try Using A VPN
+            Try installing and using a VPN
           </h1>
           <div className="h-[80px] max-w-[2px] flex-1 bg-primary md:block hidden" />
-          <h4 className="text-foreground lg:text-xl md:text-lg text-base">
-            <span className="font-extrabold italic text-primary">Don’t have a VPN? No Problem.</span>
-            <br /> We have picked some great Free VPN Options for you.
+          <h4 className="text-foreground lg:text-xl md:text-lg text-base md:text-left w-full text-center">
+            <span className="font-[800] italic text-primary">Don’t have a VPN? No Worries!</span>
+            <br /> Here are some great free VPN options we&apos;ve selected for you.
           </h4>
         </div>
-        <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 mt-8">
+        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 mt-8">
           {VPNs.map((VPN, i) => {
             return (
               <Link
                 href={VPN.link}
                 key={i}
                 target="_blank"
-                className="flex flex-col md:items-end items-start justify-end gap-4"
+                className="flex flex-col md:items-center items-center justify-center gap-4"
               >
                 <img draggable={false} src={VPN.logo} width={400} height={200} className="rounded-lg h-12 w-auto"></img>
-                <span className="text-primary text-sm uppercase underline w-full md:text-right text-left">
-                  Download Now
-                </span>
+                <span className="text-primary text-sm uppercase underline w-full text-center">Download Now</span>
               </Link>
             );
           })}
         </div>
+
+        <div className="mt-16 md:text-left text-center">
+          <p className="md:text-lg text-base font-[700] mb-4 text-pretty">
+            🌐 VPN-Friendly with Lightning-Fast Crypto Withdrawals
+          </p>
+          <p className="md:text-lg text-base font-[700] mb-4 text-pretty">
+            💰 Trusted by Web 3.0 influencers & Non-Custodial Deposits for Crypto Experts
+          </p>
+          <p className="md:text-lg text-base font-medium mb-4 text-pretty">
+            🎯 <strong>Sportsbook</strong>: Boosted Odds, Parlay, & Fancy Bets
+          </p>
+          <p className="md:text-lg text-base font-medium mb-4 text-pretty">
+            🎰 <strong>Casino</strong>: Free Spins & Hot Slot Offers
+          </p>
+          <p className="md:text-lg text-base font-medium mb-6 text-pretty">
+            🎲 <strong>Live Casino</strong>: Play with Top Game Providers
+          </p>
+
+          <p className="md:text-3xl text-2xl font-[700] mb-8 font-antonio text-pretty md:text-left text-center">
+            Ready to win big?
+            <br /> Bet now!
+          </p>
+          <ShimmerButton
+            className="shadow-2xl md:mx-0 mx-auto"
+            background="#fcd804"
+            color="#000"
+            shimmerSize="0.15rem"
+            shimmerColor="#000"
+          >
+            <span className="whitespace-pre-wrap text-center text-lg font-[800] leading-none tracking-tight text-black dark:from-white dark:to-primary lg:text-xl px-8">
+              PLAY NOW
+            </span>
+          </ShimmerButton>
+        </div>
       </section>
-      <section className="relative max-w-[1280px] mx-auto py-24 lg:px-8 px-6 flex md:flex-row flex-col items-start justify-between gap-16 overflow-visible">
+      <section className="relative max-w-[1280px] mx-auto py-16 lg:px-8 px-6 flex md:flex-row flex-col items-start justify-between gap-16 overflow-visible">
         <SpotBlur
-          className="opacity-70 md:top-0 -top-24 right-12 scale-[125%] -z-[0]"
+          className="opacity-70 md:top-0 -top-4 right-12 scale-[125%] -z-[0]"
           intensity={3}
           color="hsl(var(--primary))"
         />
         <SpotBlur className="opacity-70 md:top-72 top-96 left-0 -z-[0]" intensity={3} color="hsl(var(--primary))" />
-        <div className="flex flex-col items-start justify-start gap-8 z-10">
-          <h2 className="text-foreground lg:text-3xl text-2xl font-extrabold">
+        <div className="flex flex-col md:items-start w-full md:justify-start justify-center items-center gap-8 z-10">
+          <h2 className="text-foreground lg:text-3xl text-2xl font-[800] md:text-left text-center">
             Turn on your VPN before you
             <br className="md:block hidden" /> register in Betswap.gg
           </h2>
-          <button className="bg-[linear-gradient(-160deg,hsl(var(--primary))_0%,hsl(var(--background))_90%)] text-background rounded-lg px-16 py-3 uppercase font-[1000]">
-            PLAY NOW
-          </button>
+          <p className=" md:text-base text-sm text-pretty md:text-left text-center md:max-w-[550px]">
+            By using a VPN, you can securely access websites from anywhere by changing your location, even if the site
+            is restricted in your region.
+            <br />
+            <br /> If you&apos;re facing issues accessing Betswap.gg, feel free to reach out to us through the live chat
+            on this page.
+          </p>
+          <ShimmerButton
+            className="shadow-2xl"
+            background="#fcd804"
+            color="#000"
+            shimmerSize="0.15rem"
+            shimmerColor="#000"
+          >
+            <span className="whitespace-pre-wrap text-center text-sm leading-none tracking-tight text-black dark:from-white dark:to-primary lg:text-xl px-8 font-[800]">
+              REGISTER NOW
+            </span>
+          </ShimmerButton>
         </div>
-        <Image draggable={false} src="/betswap-logo.png" width={400} className="z-10" height={400} alt="Register" />
+        <Image
+          draggable={false}
+          src="/betswap-logo.png"
+          width={400}
+          className="z-10 md:block hidden"
+          height={400}
+          alt="Register"
+        />
       </section>
-      <section className="relative max-w-[1280px] mx-auto py-24 lg:px-8 px-6 flex flex-col items-center justify-center gap-32">
-        <h1 className="text-foreground lg:text-2xl md:text-xl text-lg font-extrabold tracking-[0.4em]">
+      <section className="relative max-w-[1280px] mx-auto py-16 lg:px-8 px-6 flex flex-col items-center justify-center gap-16">
+        <h1 className="text-foreground lg:text-2xl md:text-xl text-lg font-[800] tracking-[0.4em] md:text-left text-center">
           PLAY WITH CRYPTO CURRENCY
         </h1>
-        <div className="flex items-center justify-center gap-7 flex-row flex-wrap">
+        <div className="flex items-center justify-center gap-8 md:flex-row md:flex-wrap flex-col">
           {cryptoCurrenciesLogos.map((logo, i) => {
             return (
               <img
@@ -153,50 +232,52 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="relative max-w-[1920px] mx-auto">
+      <section className="relative max-w-[1920px] mx-auto overflow-x-clip overflow-y-visible mt-32">
         <img
           draggable={false}
           src="/section.png"
-          className="select-none size-full object-cover object-center"
-          alt="BS.GG Hero"
+          className="select-none size-full md:scale-100 scale-[200%] object-cover object-center"
+          alt="BS.GG Section"
           width={1280}
           height={720}
         />
       </section>
-      <section className="relative max-w-[1280px] mx-auto py-48 lg:px-8 px-6 flex flex-row flex-wrap items-start justify-center gap-8">
+      <section className="relative max-w-[1280px] mx-auto pb-16 pt-48 lg:px-8 px-6 flex flex-row flex-wrap items-start justify-center gap-8">
         <SpotBlur className="top-64 -left-32 -z-[0] scale-150" intensity={3} color="#8435f1" />
         <SpotBlur className="md:top-[500px] top-[800px] right-10 -z-[0] scale-150" intensity={3} color="#8435f1" />
-        {features.map((feature, i) => {
-          return (
-            <div key={i} className="relative">
-              <Image
-                draggable={false}
-                src={'/card.svg'}
-                alt="Card"
-                width={360}
-                height={360}
-                className="opacity-30 backdrop-blur-3xl"
-              />
-              <div className="absolute inset-0 flex flex-col items-start justify-start gap-4 p-7">
-                <h3 className="whitespace-pre-wrap text-foreground lg:text-2xl md:text-xl text-lg font-extrabold text-pretty">
-                  {feature.title}
-                </h3>
-                <p className="text-foreground/80 lg:text-[20px] !leading-5 md:text-sm text-xs mt-1 h-full p-8 rounded-2xl bg-background border-primary/10 border">
-                  {feature.description}
-                </p>
+        <div className="flex flex-row flex-wrap gap-16 items-start justify-start">
+          {features.map((feature, i) => {
+            return (
+              <div key={i} className="relative">
+                <Image
+                  draggable={false}
+                  src={'/card.svg'}
+                  alt="Card"
+                  width={360}
+                  height={360}
+                  className="opacity-50 backdrop-blur-3xl"
+                />
+                <div className="absolute inset-0 flex flex-col items-start justify-start gap-4 p-7">
+                  <h3 className="whitespace-pre-wrap text-foreground lg:text-xl md:text-lg text-base font-[800] text-pretty">
+                    {feature.title}
+                  </h3>
+                  <p className="text-foreground/80 lg:text-[20px] md:leading-5 leading-4 !text-sm mt-1 h-full md:p-8 p-4 rounded-2xl bg-background border-primary/10 border">
+                    {feature.description}
+                  </p>
+                </div>
+                <img
+                  draggable={false}
+                  src={feature.icon}
+                  alt="Icon"
+                  width={80}
+                  height={80}
+                  className="rounded-full size-20
+                 object-cover absolute inset-0 right-2 -top-6 ml-auto"
+                />
               </div>
-              <img
-                draggable={false}
-                src={feature.icon}
-                alt="Icon"
-                width={80}
-                height={80}
-                className="rounded-full size-20
-               object-cover absolute inset-0 right-2 -top-6 ml-auto"
-              />
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </section>
     </>
   );

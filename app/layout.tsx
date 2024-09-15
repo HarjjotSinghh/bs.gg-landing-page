@@ -2,7 +2,7 @@
 
 import localFont from 'next/font/local';
 import './globals.css';
-import { Antonio, Outfit } from 'next/font/google';
+import { Antonio, JetBrains_Mono, Outfit } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
 import Footer from '@/components/footer';
 import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
@@ -36,6 +36,13 @@ const outfit = Outfit({
   display: 'swap',
 });
 
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
+  display: 'swap',
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -51,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${antonio.variable} ${outfit.variable} antialiased font-outfit`}
+        className={`${geistSans.variable} ${geistMono.variable} ${antonio.variable} ${outfit.variable} ${jetBrainsMono.variable} antialiased font-jetbrains-mono`}
       >
         <TawkMessengerReact propertyId="9898745c4c2206183ea150271938f7a5d6381cf9" widgetId="1i7da15o2" />
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} forcedTheme="dark" themes={['dark']}>

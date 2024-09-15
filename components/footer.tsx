@@ -1,14 +1,10 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-background text-foreground text-center py-12 flex flex-col items-center">
+    <footer className="bg-background text-foreground text-center pt-12 pb-24 flex flex-col items-center lg:px-8 px-4">
       BSGG Labs N.V. is authorized by the Government of Curacao as ar Information Provider legally authorized to conduct
-      online e-gaming operations from Curacao under
-      <br />
-      Licence No 365/JAZ Sub-license GLH-OCCHKTW0709112022.
-      <br />
+      online e-gaming operations from Curacao under Licence No 365/JAZ Sub-license GLH-OCCHKTW0709112022.
       <span>
         All Rights Reserved.{' '}
         <Link href="https://betswap.gg" className="underline">
@@ -18,7 +14,6 @@ export default function Footer() {
         office at
       </span>
       Zuikertuintjeweg Z/N, Willemstad, Curacao. Registration number: 159732
-      <Image src="/footer.png" className="object-cover mt-8" alt="Curacao" width={100} height={100} />
     </footer>
   );
 }
