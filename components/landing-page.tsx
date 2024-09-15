@@ -148,7 +148,9 @@ export default function LandingPage() {
               height={32}
               className="rounded-full"
             ></img>{' '}
-            VPN-Friendly with Lightning-Fast Crypto Withdrawals
+            <span>
+              <strong className="text-primary">VPN</strong>: Friendly with Lightning-Fast Crypto Withdrawals
+            </span>
           </p>
           <p className="md:text-lg text-base font-[700] mb-4 text-pretty inline-flex items-center gap-3">
             <img
@@ -158,7 +160,10 @@ export default function LandingPage() {
               className="rounded-full"
               alt="Trusted"
             ></img>{' '}
-            Trusted by Web 3.0 influencers & Non-Custodial Deposits for Crypto Experts
+            <span>
+              <strong className="text-primary">Trusted</strong>: By Web 3.0 influencers & Non-Custodial Deposits for
+              Crypto Experts
+            </span>
           </p>
           <p className="md:text-lg text-base font-medium mb-4 text-pretty inline-flex items-center gap-3">
             <img
@@ -169,7 +174,7 @@ export default function LandingPage() {
               className="rounded-full"
             ></img>{' '}
             <span>
-              <strong>Sportsbook</strong>: Boosted Odds, Parlay, & Fancy Bets
+              <strong className="text-primary">Sportsbook</strong>: Boosted Odds, Parlay, & Fancy Bets
             </span>
           </p>
           <p className="md:text-lg text-base font-medium mb-4 text-pretty inline-flex items-center gap-3">
@@ -181,7 +186,7 @@ export default function LandingPage() {
               className="rounded-full"
             ></img>{' '}
             <span>
-              <strong>Casino</strong>: Free Spins & Hot Slot Offers
+              <strong className="text-primary">Casino</strong>: Free Spins & Hot Slot Offers
             </span>
           </p>
           <p className="md:text-lg text-base font-medium mb-6 text-pretty inline-flex items-center gap-3">
@@ -193,7 +198,7 @@ export default function LandingPage() {
               className="rounded-full"
             ></img>{' '}
             <span>
-              <strong>Live Casino</strong>: Play with Top Game Providers
+              <strong className="text-primary">Live Casino</strong>: Play with Top Game Providers
             </span>
           </p>
 
