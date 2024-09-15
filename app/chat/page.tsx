@@ -139,7 +139,13 @@ export default function Chat() {
               >
                 <div className="inline-flex flex-row gap-2 items-center">
                   {message.sender === 'bot' && (
-                    <Image src="/coin.png" className="size-10 rounded-full" alt="Betswap" width={1280} height={720} />
+                    <img
+                      src="https://i.ibb.co/Fqv2x1w/logo-with-bg.jpg"
+                      className="size-10 rounded-full"
+                      alt="Betswap"
+                      width={1280}
+                      height={720}
+                    />
                   )}
                   <div
                     className={`inline-block p-2.5 rounded-xl ${
