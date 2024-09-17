@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SpotBlur } from './ui/spot-blur';
 import Image from 'next/image';
 import ShimmerButton from './magicui/shimmer-button';
+import { X } from 'lucide-react';
 
 const VPNs = [
   {
@@ -336,13 +337,16 @@ export default function LandingPage() {
           SPORTS TIPS 365
           <br className="md:hidden block" /> X<br className="md:hidden block" /> BETSWAP.GG
         </h1> */}
-        <Image
-          src="/betswap-logo.png"
-          alt="Betswap"
-          width={400}
-          height={400}
-          className="mb-8 lg:px-8 px-4 md:h-20 h-12 w-auto"
-        />
+        <div className="flex items-center justify-center flex-col">
+          <Image
+            src="/betswap-logo.png"
+            alt="Betswap"
+            width={400}
+            height={400}
+            className=" lg:px-8 px-4 md:h-20 h-12 w-auto"
+          />
+        </div>
+        <X className="md:size-20 size-12 absolute lg:top-32 md:top-20 top-8 z-20 text-primary mt-32" />
         <div className="relative rounded-2xl overflow-hidden">
           <div className="absolute inset-0 z-10 w-full h-full bg-background [mask-image:linear-gradient(to_top,transparent_50%,black_100%)]"></div>
           <Image
