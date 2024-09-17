@@ -332,10 +332,17 @@ export default function LandingPage() {
         </div>
       </section>
       <section className="relative max-w-[1920px] pt-24 pb-36 mx-auto flex flex-col gap-8 items-center justify-center">
-        <h1 className="text-foreground lg:text-2xl md:text-xl text-lg font-[800] tracking-[0.4em] md:text-left text-center lg:px-8 px-4">
+        {/* <h1 className="text-foreground lg:text-2xl md:text-xl text-lg font-[800] tracking-[0.4em] md:text-left text-center lg:px-8 px-4">
           SPORTS TIPS 365
           <br className="md:hidden block" /> X<br className="md:hidden block" /> BETSWAP.GG
-        </h1>
+        </h1> */}
+        <Image
+          src="/betswap-logo.png"
+          alt="Betswap"
+          width={400}
+          height={400}
+          className="mb-8 lg:px-8 px-4 md:h-20 h-12 w-auto"
+        />
         <div className="relative rounded-2xl overflow-hidden">
           <div className="absolute inset-0 z-10 w-full h-full bg-background [mask-image:linear-gradient(to_top,transparent_50%,black_100%)]"></div>
           <Image
